@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--    开启注解的支持-->
+    <context:annotation-config></context:annotation-config>
+
+    <!--    自动在容器上下文中查找，与set方法参数值对应的bean-->
+    <!--<bean id="person" class="com.yang.pojo.Person" autowire="byType"-->
+    <bean id="person" class="com.yang.pojo.Person"></bean>
+    <bean id="cat11" class="com.yang.pojo.Cat"></bean>
+    <bean id="dog11" class="com.yang.pojo.Dog"></bean>
+
+
+</beans>

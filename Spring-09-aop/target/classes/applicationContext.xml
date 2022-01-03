@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="log" class="log.log"/>
+    <bean id="afterlog" class="log.AfterLog"/>
+    <bean id="userService" class="com.yang.service.UserServiceImple"/>
+    <!--    aop配置-->
+    <aop:config>
+        <!--    切入点配置-->
+        <aop:pointcut  id="pointcut" expression="execution(* com.yang.service..UserServiceImple.*(..))"/>
+        <!--    设置切入的通知-->
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterlog" pointcut-ref="pointcut"/>
+    </aop:config>
+</beans>
