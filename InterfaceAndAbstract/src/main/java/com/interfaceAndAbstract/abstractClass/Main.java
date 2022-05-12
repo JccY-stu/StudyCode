@@ -1,4 +1,4 @@
-package com.abstractClass;
+package com.interfaceAndAbstract.abstractClass;
 
 /**
  * @Author Chengzhi

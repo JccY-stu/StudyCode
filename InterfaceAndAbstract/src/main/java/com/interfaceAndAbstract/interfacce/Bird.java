@@ -1,4 +1,4 @@
-package com.interfacce;
+package com.interfaceAndAbstract.interfacce;
 
 /**
  * @Author Chengzhi
